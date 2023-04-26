@@ -18,12 +18,11 @@
             android:text="Budget App!"
             android:textSize="32dp" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="Login" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:text="Username" />
 
         <TextView
             android:id="@+id/textView3"
@@ -32,23 +31,25 @@
 
             android:text="Password" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="260dp"
-            android:layout_height="50dp"
-            android:text="Username" />
-
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign up" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Login" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Continue with" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
