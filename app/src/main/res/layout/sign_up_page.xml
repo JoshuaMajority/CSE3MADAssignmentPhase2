@@ -18,12 +18,12 @@
             android:textSize="32sp" />
 
         <EditText
-            android:id="@+id/editTextTextUsername"
+            android:id="@+id/editTextTextEmailname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Username" />
+            android:text="Email" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
