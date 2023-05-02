@@ -1,4 +1,4 @@
-package android;
+package com.example.madassignmentphase2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
