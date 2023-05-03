@@ -16,13 +16,13 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/add_new_item"
                 android:layout_width="357dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -47,6 +47,7 @@
                     android:id="@+id/switch2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:text="PAY/EXPENSE" />
 
             </TableRow>
@@ -65,8 +66,11 @@
                     android:id="@+id/editTextDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:ems="10"
-                    android:inputType="date" />
+                    android:inputType="textPersonName"
+                    android:contentDescription="Insert your name"
+                    android:hint="e.g Bob"/>
 
             </TableRow>
 
@@ -75,7 +79,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/abn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ABN" />
@@ -84,8 +88,11 @@
                     android:id="@+id/editTextTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:ems="10"
-                    android:inputType="time" />
+                    android:inputType="time"
+                    android:contentDescription="Insert ABN"
+                    android:hint="e.g 12345"/>
             </TableRow>
 
             <TableRow
@@ -93,7 +100,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/weekrate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="WEEKDAY RATE" />
@@ -102,9 +109,11 @@
                     android:id="@+id/editTextTextPersonName7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="" />
+                    android:inputType="number"
+                    android:contentDescription="Insert Weekday Rate"
+                    android:hint="e.g 100"/>
 
             </TableRow>
 
@@ -113,18 +122,20 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/textSaturdayRateT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SATURDAY RATE" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName7"
+                    android:id="@+id/editTextTextSaturdayRate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="" />
+                    android:contentDescription="Insert Saturday Rate"
+                    android:hint="e.g 100"/>
 
             </TableRow>
 
@@ -139,12 +150,15 @@
                     android:text="SUNDAY RATE" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName7"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/editTextTextSundayRate"
+                    android:layout_width="228dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="" />
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:contentDescription="Insert Sunday Rate"
+                    android:hint="e.g 100"
+                    />
 
             </TableRow>
 
@@ -153,7 +167,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="327dp" />
+            android:layout_height="290dp" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
@@ -171,8 +185,8 @@
 
                 <Button
                     android:id="@+id/button4"
-                    android:layout_width="113dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="107dp"
+                    android:layout_height="60dp"
                     android:text="Add New Item" />
 
                 <Space
