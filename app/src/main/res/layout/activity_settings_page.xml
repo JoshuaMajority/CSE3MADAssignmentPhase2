@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings_Page">
+
+    <TableRow
+        android:layout_width="411dp"
+        android:layout_height="59dp"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="87dp"
+            android:layout_height="65dp"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="323dp"
+            android:layout_height="59dp"
+            app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="409dp"
+        android:layout_height="51dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="66dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:text="Username Change" />
+
+        <EditText
+            android:id="@+id/editTextDate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="110dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:text="Password Change" />
+
+        <EditText
+            android:id="@+id/editTextDate3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="408dp"
+        android:layout_height="48dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="156dp">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:text="Username and Password" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="406dp"
+        android:layout_height="536dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="195dp">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:text="Version" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:text="1.0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
