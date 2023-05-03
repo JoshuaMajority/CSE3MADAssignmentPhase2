@@ -69,7 +69,6 @@
                     android:minHeight="48dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:contentDescription="Insert your name"
                     android:hint="e.g Bob"/>
 
             </TableRow>
@@ -91,7 +90,6 @@
                     android:minHeight="48dp"
                     android:ems="10"
                     android:inputType="time"
-                    android:contentDescription="Insert ABN"
                     android:hint="e.g 12345"/>
             </TableRow>
 
@@ -100,7 +98,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/weekrate"
+                    android:id="@+id/weekdayrate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="WEEKDAY RATE" />
@@ -112,7 +110,6 @@
                     android:minHeight="48dp"
                     android:ems="10"
                     android:inputType="number"
-                    android:contentDescription="Insert Weekday Rate"
                     android:hint="e.g 100"/>
 
             </TableRow>
@@ -134,7 +131,6 @@
                     android:minHeight="48dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:contentDescription="Insert Saturday Rate"
                     android:hint="e.g 100"/>
 
             </TableRow>
@@ -156,7 +152,6 @@
                     android:ems="10"
                     android:inputType="number"
                     android:minHeight="48dp"
-                    android:contentDescription="Insert Sunday Rate"
                     android:hint="e.g 100"
                     />
 
