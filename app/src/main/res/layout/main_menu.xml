@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/google"
-        android:layout_centerInParent="true"
-        android:id="@+id/google"
-        />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,6 +29,7 @@
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="USERNAME" />
@@ -60,6 +53,7 @@
             android:id="@+id/editTextTextPersonName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="PASSWORD" />
@@ -81,11 +75,11 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="226dp" />
+            android:layout_height="10dp" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="88dp">
 
             <Button
                 android:id="@+id/button"
@@ -99,6 +93,12 @@
                 android:layout_height="wrap_content"
                 android:text="Sign Up" />
         </TableRow>
+
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:src="@drawable/google" />
 
     </LinearLayout>
 
