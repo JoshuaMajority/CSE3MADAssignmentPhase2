@@ -17,10 +17,10 @@
 
             <Button
                 android:id="@+id/close"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:text="X"
-                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+                />
 
             <TextView
                 android:id="@+id/add_new_item"
@@ -163,7 +163,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="290dp" />
+            android:layout_height="271dp" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
