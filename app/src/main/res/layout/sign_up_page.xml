@@ -21,6 +21,7 @@
             android:id="@+id/editTextTextEmailname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Email" />
@@ -29,6 +30,7 @@
             android:id="@+id/editTextTextPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Password" />
