@@ -16,11 +16,11 @@
             android:layout_height="64dp"
             tools:layout_editor_absoluteX="0dp">
 
-            <ImageButton
+            <Button
                 android:id="@+id/imageButton5"
                 android:layout_width="87dp"
                 android:layout_height="65dp"
-                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+                android:text="X" />
 
             <ImageView
                 android:id="@+id/imageView2"
