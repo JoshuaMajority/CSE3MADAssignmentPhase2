@@ -11,11 +11,11 @@
         android:layout_height="59dp"
         tools:layout_editor_absoluteX="0dp">
 
-        <ImageButton
+        <Button
             android:id="@+id/imageButton5"
             android:layout_width="87dp"
             android:layout_height="65dp"
-            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+            android:text="X" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -41,6 +41,8 @@
             android:id="@+id/editTextDate2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="xxxxxxx"
             android:ems="10"
             android:inputType="date" />
     </TableRow>
@@ -61,7 +63,9 @@
             android:id="@+id/editTextDate3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:ems="10"
+            android:hint="xxxxxxx"
             android:inputType="date" />
     </TableRow>
 
@@ -81,6 +85,7 @@
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="On" />
 
     </TableRow>
