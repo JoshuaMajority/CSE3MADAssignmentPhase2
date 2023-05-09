@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class Home_Page extends AppCompatActivity {
 
@@ -18,6 +17,7 @@ public class Home_Page extends AppCompatActivity {
 
         Button btn = findViewById(R.id.addin);
         Button two = findViewById(R.id.sett);
+        Button three = findViewById(R.id.tomainmenu);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +31,13 @@ public class Home_Page extends AppCompatActivity {
             public void onClick(View view) {
                 Intent my2Int = new Intent(getApplicationContext(), Settings_Page.class);
                 startActivity(my2Int);
+            }
+        });
+        three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent my3Int = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(my3Int);
             }
         });
     }
