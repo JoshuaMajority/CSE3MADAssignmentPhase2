@@ -212,7 +212,7 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/addnewi"
                     android:layout_width="113dp"
                     android:layout_height="wrap_content"
                     android:text="Add New Item" />
