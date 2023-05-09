@@ -44,6 +44,8 @@ public class HomeActivity extends AppCompatActivity {
 
             name.setText(Name);
             mail.setText(Mail);
+            Intent intent = new Intent(this, Home_Page.class);
+            startActivity(intent);
         }
 
         logout.setOnClickListener(new View.OnClickListener() {
