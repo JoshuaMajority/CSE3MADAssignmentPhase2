@@ -31,7 +31,7 @@
                 android:textSize="38dp" />
 
             <Button
-                android:id="@+id/imageButton"
+                android:id="@+id/sett"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"

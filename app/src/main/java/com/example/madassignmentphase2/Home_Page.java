@@ -17,12 +17,20 @@ public class Home_Page extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         Button btn = findViewById(R.id.addin);
+        Button two = findViewById(R.id.sett);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myInt = new Intent(getApplicationContext(), Add_Invoice.class);
                 startActivity(myInt);
+            }
+        });
+        two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent my2Int = new Intent(getApplicationContext(), Settings_Page.class);
+                startActivity(my2Int);
             }
         });
     }
