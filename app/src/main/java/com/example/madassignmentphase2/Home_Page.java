@@ -2,6 +2,7 @@ package com.example.madassignmentphase2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.View;
@@ -20,7 +21,8 @@ public class Home_Page extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "The Button has been Clicked", Toast.LENGTH_LONG).show();
+                Intent myInt = new Intent(getApplicationContext(), Add_Invoice.class);
+                startActivity(myInt);
             }
         });
     }
