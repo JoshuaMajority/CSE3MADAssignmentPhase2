@@ -42,11 +42,7 @@
                 android:layout_width="245dp"
                 android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/recoverusername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recover Username" />
+
         </TableRow>
 
         <EditText
@@ -66,11 +62,7 @@
                 android:layout_width="245dp"
                 android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/recoverpassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recover Password" />
+
         </TableRow>
 
         <Space
