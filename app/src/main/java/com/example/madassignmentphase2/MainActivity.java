@@ -48,12 +48,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button btn = findViewById(R.id.btnok);
+        Button two = findViewById(R.id.btnlo);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myInt = new Intent(getApplicationContext(), SignUp.class);
                 startActivity(myInt);
+            }
+        });
+        two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent my2Int = new Intent(getApplicationContext(), Home_Page.class);
+                startActivity(my2Int);
             }
         });
 
