@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
                     android:ems="10"
-                    android:inputType="date"
+                    android:inputType="phone"
                     android:hint="e.g xx/xx/xx"/>
 
             </TableRow>
