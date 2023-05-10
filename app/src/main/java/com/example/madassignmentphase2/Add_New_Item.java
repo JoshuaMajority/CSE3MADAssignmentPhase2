@@ -19,7 +19,7 @@ public class Add_New_Item extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myInt = new Intent(getApplicationContext(), Home_Page.class);
+                Intent myInt = new Intent(getApplicationContext(), Add_Invoice.class);
                 startActivity(myInt);
             }
         });
