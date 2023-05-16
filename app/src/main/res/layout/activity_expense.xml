@@ -45,7 +45,7 @@
                 android:layout_height="match_parent">
 
                 <Switch
-                    android:id="@+id/eswitch2"
+                    android:id="@+id/E_Switch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
@@ -58,13 +58,13 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/E_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NAME" />
 
                 <EditText
-                    android:id="@+id/editTextDate"
+                    android:id="@+id/editE_Name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
@@ -78,34 +78,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/abn"
+                <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ABN" />
+                    android:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/editTextTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:ems="10"
-                    android:inputType="time"
-                    android:hint="e.g 12345"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RadioButton" />
+                </RadioGroup>
 
                 <TextView
-                    android:id="@+id/weekdayrate"
+                    android:id="@+id/E_WR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="WEEKDAY RATE" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName7"
+                    android:id="@+id/editE_WR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
@@ -120,13 +111,13 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textSaturdayRateT"
+                    android:id="@+id/E_SR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SATURDAY RATE" />
 
                 <EditText
-                    android:id="@+id/editTextTextSaturdayRate"
+                    android:id="@+id/editE_SR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
@@ -141,13 +132,13 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/E_SunR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SUNDAY RATE" />
 
                 <EditText
-                    android:id="@+id/editTextTextSundayRate"
+                    android:id="@+id/editE_SunR"
                     android:layout_width="228dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
