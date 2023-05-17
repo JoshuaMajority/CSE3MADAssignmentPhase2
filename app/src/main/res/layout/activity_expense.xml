@@ -133,7 +133,7 @@
             android:text="Monthly" />
 
         <RadioButton
-            android:id="@+id/6monthb"
+            android:id="@+id/halfyearly"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="6 Monthly" />

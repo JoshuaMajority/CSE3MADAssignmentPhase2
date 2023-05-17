@@ -37,7 +37,7 @@
             android:text="Export Single Pay PDF" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/idBtnGeneratePDF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Export Full Pay PDF" />

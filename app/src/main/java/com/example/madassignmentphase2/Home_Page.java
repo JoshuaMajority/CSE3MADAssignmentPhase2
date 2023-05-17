@@ -18,6 +18,7 @@ public class Home_Page extends AppCompatActivity {
         Button btn = findViewById(R.id.addin);
         Button two = findViewById(R.id.sett);
         Button three = findViewById(R.id.tomainmenu);
+        Button four = findViewById(R.id.toshare);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,13 @@ public class Home_Page extends AppCompatActivity {
             public void onClick(View view) {
                 Intent my3Int = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(my3Int);
+            }
+        });
+        four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent my4Int = new Intent(getApplicationContext(), Share_Page.class);
+                startActivity(my4Int);
             }
         });
     }
