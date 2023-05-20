@@ -48,7 +48,7 @@ public class Add_New_Item extends AppCompatActivity {
             n_editor.putString("Saturday Rate", N_Sat_RateStr);
             n_editor.putString("Sunday Rate", N_Sunday_RateStr);
             n_editor.commit();
-                Toast.makeText(Add_New_Item.this, "Information Saved", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Add_New_Item.this, "Information Saved", Toast.LENGTH_SHORT).show();
             }
         });
 
