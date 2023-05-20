@@ -98,7 +98,7 @@
                     android:text="Pay Company" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName7"
+                    android:id="@+id/editPayCompany"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
@@ -129,7 +129,7 @@
                     android:text="Hours" />
 
                 <EditText
-                    android:id="@+id/editTextNumberDecimal"
+                    android:id="@+id/editPayHours"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
@@ -149,7 +149,7 @@
                     android:text="Pay" />
 
                 <EditText
-                    android:id="@+id/editTextNumberDecimal2"
+                    android:id="@+id/editPay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
@@ -169,7 +169,7 @@
                     android:text="Tax" />
 
                 <EditText
-                    android:id="@+id/editTextNumberDecimal3"
+                    android:id="@+id/editTax"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
@@ -194,10 +194,10 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/button6"
-                    android:layout_width="31dp"
+                    android:id="@+id/addinv"
+                    android:layout_width="398dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="31"
                     android:text="ADD INVOICE" />
 
                 <Space
@@ -205,18 +205,18 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
-                <Button
-                    android:id="@+id/addnewi"
-                    android:layout_width="113dp"
-                    android:layout_height="wrap_content"
-                    android:text="Add New Item" />
-
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
             </LinearLayout>
         </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <Button
+            android:id="@+id/addnewi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Item" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
