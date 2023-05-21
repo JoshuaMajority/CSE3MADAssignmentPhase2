@@ -1,7 +1,5 @@
 package com.example.madassignmentphase2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,7 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Add_Invoice extends AppCompatActivity {
+
+    public static boolean InvoiceAdded;
+
+
 
     EditText Date, Time, PayCompany, Hours, Pay, Tax;
     Button add_invoice;
@@ -52,6 +56,9 @@ public class Add_Invoice extends AppCompatActivity {
                 editor.putString("Tax", TaxStr);
                 editor.commit();
                 Toast.makeText(Add_Invoice.this, "Information Saved", Toast.LENGTH_SHORT).show();
+                InvoiceAdded = true; // value from Spinner
+                Intent intent = new Intent(Add_Invoice.this, Home_Page.class);
+                startActivity(intent);
             }
         });
 

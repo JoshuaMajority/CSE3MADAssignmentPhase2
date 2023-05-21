@@ -1,7 +1,5 @@
 package com.example.madassignmentphase2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +11,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,7 +23,11 @@ public class ExpenseActivity extends AppCompatActivity {
     SharedPreferences e_sp;
     String E_NameStr, E_PayRateStr;
 
+    String Interval;
+
     Set<String> expenseSet;
+
+    public static boolean ExpenceAdded;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -42,10 +46,12 @@ public class ExpenseActivity extends AppCompatActivity {
         e_sp = getSharedPreferences("Expense Data", Context.MODE_PRIVATE);
         expenseSet = e_sp.getStringSet("Expense", new HashSet<>());
 
+
         weeklyRB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String intervalStr = "weekly";
+                Interval = "weekly";
                 SharedPreferences.Editor e_editor = e_sp.edit();
                 e_editor.putString("expenseWeeklyInterval", intervalStr);
                 e_editor.apply();
@@ -56,6 +62,7 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String intervalStr = "monthly";
+                Interval = "monthly";
                 SharedPreferences.Editor e_editor = e_sp.edit();
                 e_editor.putString("expenseMonthlyInterval", intervalStr);
                 e_editor.apply();
@@ -66,6 +73,7 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String intervalStr = "6 monthly";
+                Interval = "6monthly";
                 SharedPreferences.Editor e_editor = e_sp.edit();
                 e_editor.putString("expenseSixMonthlyInterval", intervalStr);
                 e_editor.apply();
@@ -80,7 +88,7 @@ public class ExpenseActivity extends AppCompatActivity {
 
                 SharedPreferences.Editor e_editor = e_sp.edit();
 
-                String eExpenseStr = E_NameStr + "," + E_PayRateStr;
+                String eExpenseStr = E_NameStr + "," + E_PayRateStr + "," + Interval;
 
                 if (expenseSet != null && !expenseSet.isEmpty()) {
                     expenseSet.add(eExpenseStr);
@@ -93,8 +101,10 @@ public class ExpenseActivity extends AppCompatActivity {
                 e_editor.apply();
                 Toast.makeText(ExpenseActivity.this, "Expense added successfully", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(ExpenseActivity.this, MainActivity.class);
+                Intent intent = new Intent(ExpenseActivity.this, Home_Page.class);
                 startActivity(intent);
+                ExpenceAdded = true;
+
             }
         });
     }

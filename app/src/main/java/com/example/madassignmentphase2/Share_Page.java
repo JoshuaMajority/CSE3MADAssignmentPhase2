@@ -1,9 +1,12 @@
 package com.example.madassignmentphase2;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Typeface;
@@ -22,11 +25,9 @@ import androidx.core.content.ContextCompat;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-
-import android.os.Bundle;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Share_Page extends AppCompatActivity {
 
@@ -118,8 +119,8 @@ public class Share_Page extends AppCompatActivity {
         // the first parameter is our text, second parameter
         // is position from start, third parameter is position from top
         // and then we are passing our variable of paint which is title.
-        canvas.drawText("A portal for IT professionals.", 209, 100, title);
-        canvas.drawText("Geeks for Geeks", 209, 80, title);
+        canvas.drawText("Weekly PDF Outline On Spends", 209, 100, title);
+        canvas.drawText("Budget-APP", 209, 80, title);
 
         // similarly we are creating another text and in this
         // we are aligning this text to center of our PDF file.
@@ -127,10 +128,32 @@ public class Share_Page extends AppCompatActivity {
         title.setColor(ContextCompat.getColor(this, R.color.purple_200));
         title.setTextSize(15);
 
-        // below line is used for setting
-        // our text to center of PDF.
-        title.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText("This is sample document which we have created.", 396, 560, title);
+
+        if (Add_Invoice.InvoiceAdded == true) {
+            SharedPreferences sp = getApplicationContext().getSharedPreferences("Invoice", Context.MODE_PRIVATE);
+            String payCompany = sp.getString("PayCompany", "");
+            String pay = sp.getString("Pay", "");
+            // below line is used for setting
+            // our text to center of PDF.
+            title.setTextAlign(Paint.Align.LEFT);
+            canvas.drawText(payCompany + ": " + pay, 396, 300, title);
+        }
+
+        int InitialYValue = 320;
+
+        if (ExpenseActivity.ExpenceAdded = true) {
+            SharedPreferences sp1 = getApplicationContext().getSharedPreferences("Expense Data", Context.MODE_PRIVATE);
+            Set<String> expenseSet = sp1.getStringSet("Expense", new HashSet<>());
+            Iterator<String> itr = expenseSet.iterator();
+
+
+            while (itr.hasNext()) {
+                String[] arrOfExpense = itr.next().split(",");
+                InitialYValue = InitialYValue + 20;
+                title.setTextAlign(Paint.Align.LEFT);
+                canvas.drawText(arrOfExpense[0] + ": " + arrOfExpense[1] + " " + arrOfExpense[2], 396, InitialYValue, title);
+            }
+        }
 
         // after adding all attributes to our
         // PDF file we will be finishing our page.

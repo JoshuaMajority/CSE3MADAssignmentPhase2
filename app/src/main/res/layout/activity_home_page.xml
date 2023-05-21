@@ -8,25 +8,33 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/toshare"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
+            android:gravity = "center"
             android:layout_height="wrap_content"
             android:text="Share" />
 
+
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="165dp">
+            android:layout_height="62dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
 
             <Button
                 android:id="@+id/tomainmenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="X"
-                />
+                android:text="X" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -34,35 +42,37 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="MAIN MENU"
-                android:textSize="38dp" />
+                android:textSize="38sp" />
 
             <Button
                 android:id="@+id/sett"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:minWidth="48dp"
-                android:hint="O"
                 android:layout_weight="1"
-                />
+                android:hint="O"
+                android:minWidth="48dp"
+                android:minHeight="48dp" />
+
+
 
         </TableRow>
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/_023_03_22_12_33_43_financial_app_xlsx___excel" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="98dp" />
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="530dp">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="41dp" >
+                <com.anychart.AnyChartView
+                    android:id="@+id/anyChartView"
+                    android:layout_marginVertical="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+        </FrameLayout>
 
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         <Button
             android:id="@+id/addin"
@@ -70,5 +80,7 @@
             android:layout_height="85dp"
             android:text="Add INVOICE" />
 
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

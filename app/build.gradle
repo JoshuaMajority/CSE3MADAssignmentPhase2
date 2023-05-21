@@ -44,6 +44,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'com.google.firebase:firebase-auth:22.0.0'
     implementation 'androidx.navigation:navigation-fragment:2.4.1'
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
     implementation 'com.google.firebase:firebase-database:20.2.1'
     implementation 'com.google.firebase:firebase-firestore:24.6.0'
