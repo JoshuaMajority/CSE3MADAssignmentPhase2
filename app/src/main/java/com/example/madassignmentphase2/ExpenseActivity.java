@@ -40,7 +40,7 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String intervalStr = "weekly";
-                SharedPreferences.Editor e_editor = getSharedPreferences("Invoice", Context.MODE_PRIVATE).edit();
+                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Content", Context.MODE_PRIVATE).edit();
                 e_editor.putString("Weekly", intervalStr);
                 e_editor.apply();
             }
@@ -50,7 +50,7 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String intervalStr = "monthly";
-                SharedPreferences.Editor e_editor = getSharedPreferences("Expense", Context.MODE_PRIVATE).edit();
+                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Content", Context.MODE_PRIVATE).edit();
                 e_editor.putString("Monthly", intervalStr);
                 e_editor.apply();
             }
@@ -60,7 +60,7 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String intervalStr = "6 monthly";
-                SharedPreferences.Editor e_editor = getSharedPreferences("Expense", Context.MODE_PRIVATE).edit();
+                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Content", Context.MODE_PRIVATE).edit();
                 e_editor.putString("6 Monthly", intervalStr);
                 e_editor.apply();
             }
