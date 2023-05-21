@@ -133,10 +133,14 @@ public class Share_Page extends AppCompatActivity {
             SharedPreferences sp = getApplicationContext().getSharedPreferences("Invoice", Context.MODE_PRIVATE);
             String payCompany = sp.getString("PayCompany", "");
             String pay = sp.getString("Pay", "");
+            String date = sp.getString("Date", "");
+            String time = sp.getString("Time", "");
+            String hours = sp.getString("Hours", "");
+            String tax = sp.getString("Tax", "");
             // below line is used for setting
             // our text to center of PDF.
             title.setTextAlign(Paint.Align.LEFT);
-            canvas.drawText(payCompany + ": " + pay, 396, 300, title);
+            canvas.drawText(date + ", " + time + ", " + payCompany + ": " + pay + " at " + tax + "% tax", 396, 300, title);
         }
 
         int InitialYValue = 320;
