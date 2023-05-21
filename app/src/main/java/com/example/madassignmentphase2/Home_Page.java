@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.Button;
 
@@ -27,6 +26,7 @@ public class Home_Page extends AppCompatActivity {
                 startActivity(myInt);
             }
         });
+
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +34,7 @@ public class Home_Page extends AppCompatActivity {
                 startActivity(my2Int);
             }
         });
+
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +42,7 @@ public class Home_Page extends AppCompatActivity {
                 startActivity(my3Int);
             }
         });
+
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

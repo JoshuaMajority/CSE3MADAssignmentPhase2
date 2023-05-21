@@ -35,9 +35,9 @@ public class ExpenseActivity extends AppCompatActivity {
         RadioButton monthlyRB = findViewById(R.id.monthb);
         RadioButton sixmonthlyRB = findViewById(R.id.sixmonthb);
 
-        E_Name = findViewById(R.id.E_name);
+        E_Name = findViewById(R.id.editE_Name);
         E_PayRate = findViewById(R.id.editE_PR);
-        add_new_expense = findViewById(R.id.add_new_expense);
+        add_new_expense = findViewById(R.id.addnewexpense);
 
         e_sp = getSharedPreferences("Expense Data", Context.MODE_PRIVATE);
         expenseSet = e_sp.getStringSet("Expense", new HashSet<>());
@@ -80,37 +80,21 @@ public class ExpenseActivity extends AppCompatActivity {
 
                 SharedPreferences.Editor e_editor = e_sp.edit();
 
-                String eExpenseStr = E_NameStr + "," +E_PayRateStr;
+                String eExpenseStr = E_NameStr + "," + E_PayRateStr;
 
-                if (expenseSet != null && !expenseSet.isEmpty()){
+                if (expenseSet != null && !expenseSet.isEmpty()) {
                     expenseSet.add(eExpenseStr);
-                } else{
+                } else {
                     expenseSet = new HashSet<>();
                     expenseSet.add(eExpenseStr);
                 }
 
                 e_editor.putStringSet("Expense", expenseSet);
                 e_editor.apply();
-                Toast.makeText(ExpenseActivity.this, "Information Saved", Toast.LENGTH_SHORT).show();
-            }
-        });
+                Toast.makeText(ExpenseActivity.this, "Expense added successfully", Toast.LENGTH_SHORT).show();
 
-        Button btn = findViewById(R.id.to_pay);
-        Button two = findViewById(R.id.gotomm);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myInt = new Intent(getApplicationContext(), Add_Invoice.class);
-                startActivity(myInt);
-            }
-        });
-
-        two.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent my2Int = new Intent(getApplicationContext(), Home_Page.class);
-                startActivity(my2Int);
+                Intent intent = new Intent(ExpenseActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
