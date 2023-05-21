@@ -34,14 +34,14 @@ public class ExpenseActivity extends AppCompatActivity {
         E_PayRate = findViewById(R.id.editE_PR);
         add_new_expense = findViewById(R.id.add_new_expense);
 
-        e_sp = getSharedPreferences("Expense", Context.MODE_PRIVATE);
+        e_sp = getSharedPreferences("Expense Data", Context.MODE_PRIVATE);
 
         weeklyRB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String intervalStr = "weekly";
-                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Content", Context.MODE_PRIVATE).edit();
-                e_editor.putString("Weekly", intervalStr);
+                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Data", Context.MODE_PRIVATE).edit();
+                e_editor.putString("expenseWeeklyInterval", intervalStr);
                 e_editor.apply();
             }
         });
@@ -50,8 +50,8 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String intervalStr = "monthly";
-                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Content", Context.MODE_PRIVATE).edit();
-                e_editor.putString("Monthly", intervalStr);
+                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Data", Context.MODE_PRIVATE).edit();
+                e_editor.putString("expenseMonthlyInterval", intervalStr);
                 e_editor.apply();
             }
         });
@@ -60,8 +60,8 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String intervalStr = "6 monthly";
-                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Content", Context.MODE_PRIVATE).edit();
-                e_editor.putString("6 Monthly", intervalStr);
+                SharedPreferences.Editor e_editor = getSharedPreferences("Expense Data", Context.MODE_PRIVATE).edit();
+                e_editor.putString("expenseSixMonthlyInterval", intervalStr);
                 e_editor.apply();
             }
         });
