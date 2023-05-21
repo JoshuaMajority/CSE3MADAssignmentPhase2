@@ -133,7 +133,7 @@
             android:text="Monthly" />
 
         <RadioButton
-            android:id="@+id/halfyearly"
+            android:id="@+id/sixmonthb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="6 Monthly" />
@@ -157,7 +157,7 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/addnewi"
+                    android:id="@+id/addnewexpense"
                     android:layout_width="107dp"
                     android:layout_height="60dp"
                     android:text="Add New Item" />
