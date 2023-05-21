@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class Add_Invoice extends AppCompatActivity {
 
     EditText Date, Time, PayCompany, Hours, Pay, Tax;
-    Button add_invoice, add_new_item;
+    Button add_invoice;
     SharedPreferences sp;
     String DateStr, TimeStr, PayCompanyStr, HoursStr, PayStr, TaxStr;
 
@@ -30,7 +30,6 @@ public class Add_Invoice extends AppCompatActivity {
         Pay = findViewById(R.id.editPay);
         Tax = findViewById(R.id.editTax);
         add_invoice = findViewById(R.id.addinv);
-        add_new_item = findViewById(R.id.addnewi);
 
         sp = getSharedPreferences("Invoice", Context.MODE_PRIVATE);
         add_invoice.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +57,7 @@ public class Add_Invoice extends AppCompatActivity {
 
 
         Button btn = findViewById(R.id.cai);
-        Button two = findViewById(R.id.addnewi);
+        Button two = findViewById(R.id.toexpense);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +69,7 @@ public class Add_Invoice extends AppCompatActivity {
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent my2Int = new Intent(getApplicationContext(), Add_New_Item.class);
+                Intent my2Int = new Intent(getApplicationContext(), ExpenseActivity.class);
                 startActivity(my2Int);
             }
         });

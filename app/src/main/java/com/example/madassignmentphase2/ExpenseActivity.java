@@ -14,10 +14,10 @@ import android.widget.Toast;
 
 public class ExpenseActivity extends AppCompatActivity {
 
-    EditText E_Name, E_SaturdayRate, E_SundayRate;
+    EditText E_Name, E_PayRate;
     Button add_new_expense;
     SharedPreferences e_sp;
-    String E_NameStr, E_SaturdayRateStr, E_SundayRateStr;
+    String E_NameStr, E_PayRateStr;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,7 @@ public class ExpenseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_expense);
 
         E_Name = findViewById(R.id.E_name);
-        E_SaturdayRate = findViewById(R.id.editE_SR);
-        E_SundayRate = findViewById(R.id.editE_SunR);
+        E_PayRate = findViewById(R.id.editE_PR);
         add_new_expense = findViewById(R.id.add_new_expense);
 
         e_sp = getSharedPreferences("Expense", Context.MODE_PRIVATE);
@@ -35,14 +34,12 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 E_NameStr = E_Name.getText().toString();
-                E_SaturdayRateStr = E_SaturdayRate.getText().toString();
-                E_SundayRateStr = E_SundayRate.getText().toString();
+                E_PayRateStr = E_PayRate.getText().toString();
 
                 SharedPreferences.Editor e_editor = e_sp.edit();
 
                 e_editor.putString("Name", E_NameStr);
-                e_editor.putString("Saturday Rate", E_SaturdayRateStr);
-                e_editor.putString("Sunday Rate", E_SundayRateStr);
+                e_editor.putString("Pay Rate", E_PayRateStr);
                 e_editor.commit();
                 Toast.makeText(ExpenseActivity.this, "Information Saved", Toast.LENGTH_SHORT).show();
             }
@@ -54,7 +51,7 @@ public class ExpenseActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myInt = new Intent(getApplicationContext(), Add_New_Item.class);
+                Intent myInt = new Intent(getApplicationContext(), Add_Invoice.class);
                 startActivity(myInt);
             }
         });
