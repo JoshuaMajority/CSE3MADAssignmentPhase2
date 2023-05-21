@@ -22,9 +22,6 @@
             android:name=".Home_Page"
             android:exported="false" />
         <activity
-            android:name=".Add_New_Item"
-            android:exported="false" />
-        <activity
             android:name=".Add_Invoice"
             android:exported="false" />
         <activity

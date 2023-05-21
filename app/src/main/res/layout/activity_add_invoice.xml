@@ -213,10 +213,10 @@
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         <Button
-            android:id="@+id/addnewi"
+            android:id="@+id/toexpense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add New Item" />
+            android:text="Expense" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

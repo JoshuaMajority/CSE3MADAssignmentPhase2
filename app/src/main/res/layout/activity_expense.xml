@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="PAY" />
+                    android:text="Invoice" />
 
             </TableRow>
 
@@ -79,41 +79,19 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/E_SR"
+                    android:id="@+id/E_PR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SATURDAY RATE" />
+                    android:text="PAY RATE" />
 
                 <EditText
-                    android:id="@+id/editE_SR"
+                    android:id="@+id/editE_PR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:hint="e.g 100"/>
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/E_SunR"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SUNDAY RATE" />
-
-                <EditText
-                    android:id="@+id/editE_SunR"
-                    android:layout_width="228dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:minHeight="48dp"
-                    android:hint="e.g 100"
-                    />
 
             </TableRow>
 
@@ -140,7 +118,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="223dp" />
+            android:layout_height="278dp" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
@@ -160,7 +138,7 @@
                     android:id="@+id/addnewexpense"
                     android:layout_width="107dp"
                     android:layout_height="60dp"
-                    android:text="Add New Item" />
+                    android:text="Add New Expense" />
 
                 <Space
                     android:layout_width="wrap_content"
