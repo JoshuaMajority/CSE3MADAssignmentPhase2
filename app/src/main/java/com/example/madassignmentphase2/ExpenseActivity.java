@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class ExpenseActivity extends AppCompatActivity {
@@ -18,17 +19,52 @@ public class ExpenseActivity extends AppCompatActivity {
     Button add_new_expense;
     SharedPreferences e_sp;
     String E_NameStr, E_PayRateStr;
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expense);
 
+        RadioButton weeklyRB = findViewById(R.id.weekb);
+        RadioButton monthlyRB = findViewById(R.id.monthb);
+        RadioButton sixmonthlyRB = findViewById(R.id.sixmonthb);
+
         E_Name = findViewById(R.id.E_name);
         E_PayRate = findViewById(R.id.editE_PR);
         add_new_expense = findViewById(R.id.add_new_expense);
 
         e_sp = getSharedPreferences("Expense", Context.MODE_PRIVATE);
+
+        weeklyRB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String intervalStr = "weekly";
+                SharedPreferences.Editor e_editor = getSharedPreferences("Invoice", Context.MODE_PRIVATE).edit();
+                e_editor.putString("Weekly", intervalStr);
+                e_editor.apply();
+            }
+        });
+
+        monthlyRB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String intervalStr = "monthly";
+                SharedPreferences.Editor e_editor = getSharedPreferences("Expense", Context.MODE_PRIVATE).edit();
+                e_editor.putString("Monthly", intervalStr);
+                e_editor.apply();
+            }
+        });
+
+        sixmonthlyRB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String intervalStr = "6 monthly";
+                SharedPreferences.Editor e_editor = getSharedPreferences("Expense", Context.MODE_PRIVATE).edit();
+                e_editor.putString("6 Monthly", intervalStr);
+                e_editor.apply();
+            }
+        });
 
         add_new_expense.setOnClickListener(new View.OnClickListener() {
             @Override
